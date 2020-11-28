@@ -1,0 +1,465 @@
+/* Base styles */
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+    body {
+        background-color: rgb(184, 184, 184);
+        line-height: 1.6;
+    }
+    a {
+        text-decoration: none;
+    }
+
+/* Navigation */
+.container h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+    color: rgb(245, 245, 220);
+}
+    .name,
+    .main-nav li {
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+    .main-nav a:hover {
+        color: rgb(106, 90, 205);
+    }    
+    .main-nav li {
+        font-weight: 700;    
+    }
+    .main-nav a {
+        font-size: .95em;
+        text-transform: uppercase;
+    }  
+        .name {
+            background: none;
+        }
+    .sub-container p {
+        color: rgb(245, 245, 220);
+    }
+
+.media {
+    background-color: rgb(169, 169, 169);
+}
+
+    .media ul {
+        padding-bottom: 2em;
+    }
+
+        .icons img {
+            height: 50px;
+            width: 50px;
+            
+        }
+        .icons img:hover {   
+            background-color: rgb(255, 127, 80);
+            border-radius: 30%;
+            transform: scale(1.2);
+            transition: 0.3s;
+        }
+        
+
+/* WeChat ID Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    opacity: 0;
+  }
+    .overlay:target {
+    visibility: visible;
+    opacity: 1;
+    }
+    .popup {
+        margin: 10em auto;
+        padding: 10px;
+        background: #fff;
+        border-radius: 5px;
+        width: 250px;
+        position: relative;
+        transition: all 1s ease-in-out;
+    }
+    .popup h2 {
+        margin-top: 0;
+        color: #333;
+    }
+    .popup .close {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+    }
+    .popup .content {
+        max-height: 30%;
+    }
+
+/* Media Queries */
+/* MOBILE View Port 320px View Port */
+@media (min-width: 320px) {
+    .main-header {
+      text-align: center;
+    }
+        .main-header p, li{
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+            .name {
+                margin: 1em 0 1em 0;
+                font-size: x-large;
+            }
+                .main-nav li{
+                    padding: 0.5em 0 0.5em 0;
+                    background-color: coral;
+                }
+                .main-nav a{
+                    display:block;
+                }
+                    .profile-pic{
+                        height: 150px;
+                        background-color: beige;
+                        margin: 3em 3em 2em 3em;
+                    }
+                    .profile-pic img {
+                        border-radius: 50%;
+                        height: 110px;
+                        width: 110px;
+                        position: relative;
+                        top: 20px;
+                    }
+                    .sub-container p {
+                        margin-bottom: 2.5em;
+                    }
+
+    main {
+        text-align: center;
+    }
+        main .columns {
+            margin: 0 auto; 
+            background-color: whitesmoke;
+        }
+        main img {
+            height:100%;
+            width: 100%;
+        }
+                .columns p {
+                    margin-top: 0;
+                    margin-bottom: 2em;
+                    font-weight: 100;
+                }
+                .columns h3 {
+                    padding-top: 2em;
+                    padding-bottom: 2em;
+                    margin: 0 auto;
+                    font-size: 1em;
+                }
+                    .cells {
+                        margin-right: 1em;
+                        margin-left: 1em;
+                        padding-bottom: 1em;
+                    }
+                        .cell h3 {
+                            font-weight: 400;
+                            font-size: 1.3em;
+                            padding-top: 1em;
+                            padding-bottom: 0.5em;
+                        }
+
+
+    hr {
+        border: 0;
+        border-top: 1px solid lightgrey;
+        margin-top: 3em;   
+        margin-bottom:0; 
+    }
+
+    footer {
+        margin: 3em 1em 1.5em 1em;
+    }
+
+        footer p {
+            font-weight: 100;
+        }
+
+        footer h5{
+            float: left;
+            margin: 0 auto;
+        }
+
+        footer a {
+            float: right;
+        }
+
+        footer li{
+            padding-top: 1em;
+        }
+
+        footer #totop {
+            font-size: small;
+            font-weight: 600;
+        }
+        footer span,
+        .bottom-nav ul{
+            display: none;
+        }
+            .icons li {
+                display: inline;
+            }
+            .icons img {
+                height: 35px;
+                width: 35px;
+            }
+            .bottom-nav {
+                margin-top: 1.5em;
+            }
+                .contact {
+                    text-align: center;
+                    margin-bottom: 2em;
+                }
+}
+
+/* TABLET View Port 768px View Port */
+@media (min-width: 768px) {
+    .main-header {
+        background-image: url("/images/background.jpg");
+        background-size: cover; 
+        background-color: aliceblue;
+    }
+        .container {
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+            .name {
+                margin-bottom: 1em;        
+            }
+                .main-nav{
+                    margin-bottom: 2em;
+                }   
+                .main-nav a, .name {
+                    color: beige;
+                    text-shadow: 2px 2px grey;
+                }
+                .main-nav li {
+                    display: inline;
+                    margin-left: 2em;
+                    background: none;
+                }
+                .main-nav a{
+                    border-bottom: 2px solid beige;
+                    display: inline;
+                }
+            .sub-container {
+                margin:0 auto;
+                height:25vh;
+            }
+            .sub-container p {
+                text-shadow: 2px 2px grey;
+                text-align: left;
+                width: 65%;
+                margin-left: 2em;
+                padding-top: 0;
+                font-size: larger;
+            }
+                .profile-pic {
+                    background-color: rgba(240, 255, 255, 0.7);
+                    float: right;
+                    width: 35%;
+                    margin-right:2em;
+                    margin-top: 0;
+                }
+                .profile-pic img:hover {
+                    transform: scale(1.2);
+                    transition: 0.2s;
+                }
+   
+    main .portfolio {
+        font-size: medium;
+    }
+    main .columns {
+        width: 100%;
+        text-align: center;
+    }
+        .cells {
+            margin-left: 0em;
+            margin-right: 0em;
+        }
+        .cells h3 {
+            font-weight: 400;
+        }
+        .cells p {
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+            .cell {
+                width: 45%;
+                margin-bottom: 1.5em;
+            }
+                .a, .c, .e {
+                    float: left;
+                    margin-left: 2em;
+                }
+                .b, .d, .f {
+                    float: right;
+                    margin-right: 2em; 
+                }
+
+    footer #totop {
+        display: none;
+    }
+    footer .sub-nav {
+        display: contents;
+    }
+    footer a {
+        font-weight:600;
+    }
+        .icons img {
+            height: 50px;
+            width: 50px;
+        }
+            .contact {
+                margin-bottom: 3.5em;
+            }
+                .contact h4{
+                    margin: 2em 0 2em 0;
+                }
+                .contact p,
+                .contact ul {
+                    font-size: 1.4em;
+                    font-weight: 100;
+                    margin: 0em 3em 1em 3em;
+                }
+                .information b {
+                    font-weight:400;
+                }
+            .bottom-nav {
+                padding-bottom: 3em;
+            }
+                .bottom-nav ul {
+                    display: block;
+                    float: right;
+                }
+                .bottom-nav li {
+                float:left;
+                margin-left: 2em;
+                margin-right: 0;
+                padding:0;
+                }    
+                .sub-name {
+                    font-size: initial;
+                }
+    hr {
+        width: 100%;
+    }
+}
+
+/* DESKTOP View Port 1024px View Port */
+@media (min-width: 1024px) {
+    .container {
+        padding-top: 3em;
+        padding-bottom: 5em;
+    }
+        .name,
+        .main-nav,
+        .main-nav li {
+            margin: 0 auto;
+        }
+            .name {
+                float: left;
+                font-size: 1.7em;
+            }
+                header .name {
+                    margin-left: 2em;
+                }
+                    .main-nav {
+                        margin-top: 1em;
+                        margin-right: 1.5em;
+                        float:right;
+                    }
+                        .main-nav li{
+                            padding-left: 2em;
+                            margin-right: 1.5em;
+                            padding-top: 1em;
+                        }
+                        .main-nav a{
+                            border-bottom: 2px solid beige;
+                        }
+
+    .sub-container {
+        height: 250px;
+    }
+        .sub-container p {
+            font-size: 1.3em;
+            margin-left: 2.5em;
+        }
+            .profile-pic {
+                width: 35%;
+                height: 200px;
+                margin-right: 3em;
+                margin-left: 0;
+                margin-bottom: 2em;
+            }
+                .profile-pic img {
+                    top: 25px;
+                    height: 150px;
+                    width: 150px;
+                }
+
+    main {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    }
+        .cells {
+            margin-left: 1.5em;
+            margin-right: 1.5em;
+        }
+        .cell {
+            width: 32.18%;
+        }
+            .a, .c, .e,
+            .b, .d, .f {
+                float: left;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .b, .e {
+                margin-left: 1em;
+                margin-right: 1em;
+            }
+
+    .bottom-nav {
+        padding-bottom: 0;
+    }
+    .bottom-nav h5 {
+        margin-left: 1.5em;
+    }
+
+    .bottom-nav li{
+        margin-right: 1.5em;
+    }
+        hr {
+            width: auto;
+            margin-left: 1.5em;
+            margin-right: 1.5em;
+        }
+        footer {
+            margin-left: 1.5em;
+            margin-right: 1.5em;
+            padding-left:0;
+            padding-right:0;
+        }
+            .contact {
+                margin-bottom: 5em;
+            }
+}
+/* Clearfix */
+.group::after {
+    content: "";
+    display:table;
+    clear:both;
+}
