@@ -287,10 +287,11 @@
         .cells p {
             margin-left: 1em;
             margin-right: 1em;
+            height: 30px;
         }
             .cell {
                 width: 45%;
-                margin-bottom: 1.5em;
+                margin-bottom: 4em;
             }
                 .a, .c, .e {
                     float: left;
